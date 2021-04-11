@@ -7,7 +7,7 @@ Android 8.0 and above. 9.0 for serif and monospace support.
 ## Advantage
 Compare to normal super OTC version, only 38.9MB for all weight.
 
-## [notocjk Magisk Module] Differences
+## [notocjk Magisk Module](https://github.com/simonsmh/notocjk) Differences
 This module inculdes demi-light that Android developers won't use. Because Roboto (Default font of Latin on Android) doesn't have this weight.
 
 notocjk use Noto Serif CJK subset to avoid GitHub file size limit of signle file. This module split it as two part.
