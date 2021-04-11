@@ -30,6 +30,7 @@ Noto Serif CJK doesn't have variable fonts yet. So this module add super OTC ver
 
 ## wght value
 Tools: [googlefonts/fonttools: A library to manipulate font files from Python.](https://github.com/googlefonts/fonttools)
+
 See also: [fvar — Font Variations Table (OpenType 1.8.4) - Typography | Microsoft Docs](https://docs.microsoft.com/en-us/typography/opentype/spec/fvar#instancerecord)
 
 ```bash
