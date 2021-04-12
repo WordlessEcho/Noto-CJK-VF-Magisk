@@ -31,10 +31,10 @@ See also: [fvar — Font Variations Table (OpenType 1.8.4) - Typography | Micros
 
 ```bash
 # SC as a example. They were same.
-ttx /mnt/c/Users/echo/Downloads/NotoSansSC-VF.otf
+ttx -y 3 -t fvar NotoSansCJK-VF.ttc
 ```
 ```xml
-<fvar>
+  <fvar>
 
     <!-- Weight -->
     <Axis>
@@ -47,43 +47,43 @@ ttx /mnt/c/Users/echo/Downloads/NotoSansSC-VF.otf
     </Axis>
 
     <!-- Thin -->
-    <!-- PostScript: NotoSansSCVF-Thin -->
+    <!-- PostScript: NotoSansCJKscVF-Thin -->
     <NamedInstance flags="0x0" postscriptNameID="267" subfamilyNameID="266">
       <coord axis="wght" value="100.0"/>
     </NamedInstance>
 
     <!-- Light -->
-    <!-- PostScript: NotoSansSCVF-Light -->
+    <!-- PostScript: NotoSansCJKscVF-Light -->
     <NamedInstance flags="0x0" postscriptNameID="269" subfamilyNameID="268">
       <coord axis="wght" value="300.0"/>
     </NamedInstance>
 
     <!-- DemiLight -->
-    <!-- PostScript: NotoSansSCVF-DemiLight -->
+    <!-- PostScript: NotoSansCJKscVF-DemiLight -->
     <NamedInstance flags="0x0" postscriptNameID="271" subfamilyNameID="270">
       <coord axis="wght" value="350.0"/>
     </NamedInstance>
 
     <!-- Regular -->
-    <!-- PostScript: NotoSansSCVF-Regular -->
+    <!-- PostScript: NotoSansCJKscVF-Regular -->
     <NamedInstance flags="0x0" postscriptNameID="273" subfamilyNameID="272">
       <coord axis="wght" value="400.0"/>
     </NamedInstance>
 
     <!-- Medium -->
-    <!-- PostScript: NotoSansSCVF-Medium -->
+    <!-- PostScript: NotoSansCJKscVF-Medium -->
     <NamedInstance flags="0x0" postscriptNameID="275" subfamilyNameID="274">
       <coord axis="wght" value="500.0"/>
     </NamedInstance>
 
     <!-- Bold -->
-    <!-- PostScript: NotoSansSCVF-Bold -->
+    <!-- PostScript: NotoSansCJKscVF-Bold -->
     <NamedInstance flags="0x0" postscriptNameID="277" subfamilyNameID="276">
       <coord axis="wght" value="700.0"/>
     </NamedInstance>
 
     <!-- Black -->
-    <!-- PostScript: NotoSansSCVF-Black -->
+    <!-- PostScript: NotoSansCJKscVF-Black -->
     <NamedInstance flags="0x0" postscriptNameID="279" subfamilyNameID="278">
       <coord axis="wght" value="900.0"/>
     </NamedInstance>
