@@ -7,10 +7,8 @@ Android 8.0 and above. 9.0 for serif and monospace support.
 ## Advantage
 Compare to normal super OTC version, only 38.9MB for all weight.
 
-## [notocjk Magisk Module](https://github.com/simonsmh/notocjk) Differences
-notocjk use non-variable-font as regular weight and add Droid Sans Fallback avoid [#2](https://github.com/WordlessEcho/Noto-CJK-VF-Magisk/issues/2) problem.
-
-This module inculdes demi-light that Android developers won't use. Because Roboto (Default font of Latin on Android) doesn't have this weight.
+## [notocjk Magisk Module] Differences
+This module inculdes demi-light weight and monospace that Android developers won't use. Because Roboto (Default font of Latin characters on Android) doesn't have this weight. And Noto Sans Mono CJK only changes its Latin part.
 
 notocjk use Noto Serif CJK subset to avoid GitHub file size limit of signle file. This module split it as two part.
 
@@ -19,10 +17,7 @@ notocjk use Noto Serif CJK subset to avoid GitHub file size limit of signle file
 ![App Preview](https://github.com/WordlessEcho/Variable-Font-Test/blob/main/doc/pic/TRIM_20210409_190441.gif?raw=true)
 
 ## Monospace (half-width)
-3 Latins' width == 2 ideographs' width
-![Discussion between @Belleve and Ken Lunde](https://pic4.zhimg.com/v2-ac013950215abbabf27f0ca4847f56fc_r.jpg?source=1940ef5c)
-
-Source: [如何评价思源等宽（Source Han Mono，源ノ等幅）字族？ - RexZhang的回答 - 知乎](https://www.zhihu.com/question/326423427/answer/697248702)
+It adjust **Latin characters** only to half width of the CJK characters.
 
 ## Noto Serif CJK
 Noto Serif CJK doesn't have variable fonts yet. So this module add super OTC version.
@@ -32,7 +27,6 @@ Noto Serif CJK doesn't have variable fonts yet. So this module add super OTC ver
 
 ## wght value
 Tools: [googlefonts/fonttools: A library to manipulate font files from Python.](https://github.com/googlefonts/fonttools)
-
 See also: [fvar — Font Variations Table (OpenType 1.8.4) - Typography | Microsoft Docs](https://docs.microsoft.com/en-us/typography/opentype/spec/fvar#instancerecord)
 
 ```bash
