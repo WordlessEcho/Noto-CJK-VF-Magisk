@@ -15,15 +15,17 @@ do
     if [ "$API" -ge "26" ] && [ -f $MIRRORPATH$FILEPATH$FILE ]; then
         TIMES=$((TIMES+1))
         if [ "$API" -ge "28" ]; then
-            ui_print "- Merging $SERIFNAME"
-            cat $MODPATH$FONTPATH$SERIFNAME.part* > $MODPATH$FONTPATH$SERIFNAME
-            sha256sum $MODPATH$FONTPATH$SERIFNAME | awk '{print $1}' > $MODPATH$FONTPATH$REALSUM
+            if [ ! -f $MODPATH$FONTPATH$SERIFNAME ]; then
+                ui_print "- Merging $SERIFNAME"
+                cat $MODPATH$FONTPATH$SERIFNAME.part* > $MODPATH$FONTPATH$SERIFNAME
+                sha256sum $MODPATH$FONTPATH$SERIFNAME | awk '{print $1}' > $MODPATH$FONTPATH$REALSUM
 
-            if ! cmp -s $MODPATH$FONTPATH$CHECKSUM $MODPATH$FONTPATH$REALSUM; then
-                abort "! File corrupted. Please re-download this module"
-            else
-                ui_print "- cleaning caches"
-                rm $MODPATH$FONTPATH$SERIFNAME.* 2> /dev/null
+                if ! cmp -s $MODPATH$FONTPATH$CHECKSUM $MODPATH$FONTPATH$REALSUM; then
+                    abort "! File corrupted. Please re-download this module"
+                else
+                    ui_print "- cleaning caches"
+                    rm $MODPATH$FONTPATH$SERIFNAME.* 2> /dev/null
+                fi
             fi
 
             ui_print "- Migrating $FILE"
