@@ -67,8 +67,16 @@ do
             s/<family lang=\"ko\">.*Noto.*CJK.*<\/family>/<family lang="ko">\n        <font weight="100" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="100.0" \/>\n        <\/font>\n        <font weight="300" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="300.0" \/>\n        <\/font>\n        <font weight="350" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="350.0" \/>\n        <\/font>\n        <font weight="400" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="400.0" \/>\n        <\/font>\n        <font weight="500" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="500.0" \/>\n        <\/font>\n        <font weight="700" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="700.0" \/>\n        <\/font>\n        <font weight="900" style="normal" index="2">NotoSansCJK-VF.ttc\n            <axis tag="wght" stylevalue="900.0" \/>\n        <\/font>\n\n        <font weight="200" style="normal" index="1" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="300" style="normal" index="5" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="400" style="normal" index="9" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="500" style="normal" index="13" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="600" style="normal" index="17" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="700" style="normal" index="21" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n        <font weight="900" style="normal" index="25" fallbackFor="serif">NotoSerifCJK.ttc<\/font>\n\n        <font weight="400" style="normal" index="2" fallbackFor="monospace">NotoSansMonoCJK-VF.ttc\n            <axis tag="wght" stylevalue="390.0" \/>\n        <\/font>\n        <font weight="700" style="normal" index="2" fallbackFor="monospace">NotoSansMonoCJK-VF.ttc\n            <axis tag="wght" stylevalue="780.0" \/>\n        <\/font>\n    <\/family>/};
             ' $MODPATH$FILEPATH$FILE
         else
-            ui_print "- Your Android is lower than 9.0(Pie) that doesn't support fallbackFor. Install $SANSNAME only."
-            rm $MODPATH$FONTPATH$MONONAME $MODPATH$FONTPATH$SERIFNAME.*
+            if [ -f $MODPATH$FONTPATH$MONONAME ] || [ -f $MODPATH$FONTPATH$CHECKSUM ]; then
+                ui_print "- Your Android is lower than 9.0(Pie) that doesn't support fallbackFor. Install $SANSNAME only."
+                if [ -f $MODPATH$FONTPATH$MONONAME ]; then
+                    rm $MODPATH$FONTPATH$MONONAME
+                fi
+                if [ -f $MODPATH$FONTPATH$CHECKSUM ]; then
+                    rm $MODPATH$FONTPATH$SERIFNAME.*
+                fi
+            fi
+
             ui_print "- Migrating $FILE"
             mkdir -p $MODPATH$FILEPATH
             cp -af $MIRRORPATH$FILEPATH$FILE $MODPATH$FILEPATH$FILE
