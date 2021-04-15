@@ -1,6 +1,8 @@
 # Noto CJK VF Magisk
 A module replace CJK fonts to Noto CJK Variable.
 
+Sister module: [Source-Han-VF-Magisk](https://github.com/WordlessEcho/Source-Han-VF-Magisk)
+
 ## Requirement
 Android 8.0 and above. 9.0 for serif and monospace support.
 
