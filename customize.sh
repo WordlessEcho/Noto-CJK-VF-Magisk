@@ -3,6 +3,8 @@
 FILES="fonts.xml fonts_base.xml"
 FILEPATH=/system/etc/
 FONTPATH=/system/fonts/
+MINSDK=26
+MINVER="8.0(Oreo)"
 SANSNAME=NotoSansCJK-VF-Android.ttc
 SERIFNAME=NotoSerifCJK-Android.ttc
 CHECKSUM=$SERIFNAME.sha256
@@ -11,7 +13,7 @@ TIMES=0
 
 for FILE in $FILES
 do
-    if [ "$API" -ge "26" ] && [ -f $MIRRORPATH$FILEPATH$FILE ]; then
+    if [ "$API" -ge "$MINSDK" ] && [ -f $MIRRORPATH$FILEPATH$FILE ]; then
         TIMES=$((TIMES+1))
         if [ "$API" -ge "28" ]; then
             if [ ! -f $MODPATH$FONTPATH$SERIFNAME ]; then
@@ -114,5 +116,5 @@ do
 done
 
 if [ "$TIMES" -lt "1" ]; then
-    abort "! Migration FAILED. Or your Android version is lower than 8.0(Oreo). Nothing have done to your system."
+    abort "! Migration FAILED. Or your Android version is lower than $MINVER. Nothing have done to your system."
 fi
