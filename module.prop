@@ -1,6 +1,6 @@
 id=NotoCJKVF
 name=Noto CJK VF
-version=1.6 (Sans VF: 2.004 & Serif: 1.001)
-versionCode=7
+version=1.7 (Sans VF: 2.004 & Serif: 1.001)
+versionCode=8
 author=Wordless Echo
 description=A module replace CJK fonts to Noto CJK Variable.
