@@ -4,28 +4,28 @@ A module replace CJK fonts to Noto CJK Variable.
 Sister module: [Source-Han-VF-Magisk](https://github.com/WordlessEcho/Source-Han-VF-Magisk)
 
 ## Requirement
-Android 8.0 and above. 9.0 for serif and monospace support.
+Android 8.0 and above. 9.0 for serif support.
 
 ## Advantage
 Compare to normal super OTC version, only 38.9MB for all weight.
 
 ## [notocjk Magisk Module](https://github.com/simonsmh/notocjk) Differences
-This module inculdes demi-light weight and monospace that Android developers won't use. Because Roboto (Default font of Latin characters on Android) doesn't have this weight. And Noto Sans Mono CJK only changes its Latin part.
+This module inculdes demi-light weight that Android developers won't use. Because Roboto (Default font of Latin characters on Android) doesn't have this weight.
 
 notocjk use Noto Serif CJK subset to avoid GitHub file size limit of signle file. This module split it as two part.
 
 ## Try variable
 [Variable Font Test](https://github.com/WordlessEcho/Variable-Font-Test)
-![App Preview](https://github.com/WordlessEcho/Variable-Font-Test/blob/main/doc/pic/TRIM_20210409_190441.gif?raw=true)
+![App Preview](https://github.com/WordlessEcho/Variable-Font-Test/blob/main/doc/pics/variable-font-test-zh-tw.gif?raw=true)
 
-## Monospace (half-width)
-It adjust **Latin characters** only to half width of the CJK characters.
+## Font
+Both font had been modified with [subset_noto_cjk.py](https://cs.android.com/android/platform/superproject/+/master:external/noto-fonts/cjk/subset_noto_cjk.py). And add chws feature with [kojiishi/east_asian_spacing: OpenType East Asian Contextual Spacing Build Tools](https://github.com/kojiishi/east_asian_spacing).
 
-## Noto Serif CJK
-Noto Serif CJK doesn't have variable fonts yet. So this module add super OTC version.
-
-## Noto Sans CJK VF download
+### Noto Sans CJK VF download
 [noto-cjk/Sans/Variable at main · googlefonts/noto-cjk](https://github.com/googlefonts/noto-cjk/tree/main/Sans/Variable)
+
+### Noto Serif CJK VF download
+[noto-cjk/Serif/Variable at main · googlefonts/noto-cjk](https://github.com/googlefonts/noto-cjk/tree/main/Serif/Variable)
 
 ## wght value
 Tools: [googlefonts/fonttools: A library to manipulate font files from Python.](https://github.com/googlefonts/fonttools)
