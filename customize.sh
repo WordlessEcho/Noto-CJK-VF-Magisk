@@ -95,10 +95,6 @@ do
                 rm $MODPATH$FONTPATH$SERIFNAME
             fi
 
-            ui_print "- Migrating $FILE"
-            mkdir -p $MODPATH$FILEPATH
-            cp -af $MIRRORPATH$FILEPATH$FILE $MODPATH$FILEPATH$FILE
-
             sed -i '
             /<family lang=\"zh-Hans\">/,/<\/family>/ {:a;N;/<\/family>/!ba;
             s/<family lang=\"zh-Hans\">.*Noto.*CJK.*<\/family>/<family lang="zh-Hans">\n        <font weight="100" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="100.0" \/>\n        <\/font>\n        <font weight="300" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="300.0" \/>\n        <\/font>\n        <font weight="350" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="350.0" \/>\n        <\/font>\n        <font weight="400" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="400.0" \/>\n        <\/font>\n        <font weight="500" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="500.0" \/>\n        <\/font>\n        <font weight="700" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="700.0" \/>\n        <\/font>\n        <font weight="900" style="normal" index="2">NotoSansCJK-VF-Android.otf.ttc\n            <axis tag="wght" stylevalue="900.0" \/>\n        <\/font>\n    <\/family>/};
