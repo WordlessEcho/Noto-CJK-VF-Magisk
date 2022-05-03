@@ -12,7 +12,7 @@ Compare to normal super OTC version, only 38.9MB for all weight.
 ## [notocjk Magisk Module](https://github.com/simonsmh/notocjk) Differences
 This module inculdes demi-light weight that Android developers won't use. Because Roboto (Default font of Latin characters on Android) doesn't have this weight.
 
-notocjk use Noto Serif CJK subset to avoid GitHub file size limit of signle file. This module split it as two part.
+notocjk use Noto Serif CJK subset to avoid GitHub file size limit of single file. This module split it as two part.
 
 ## Try variable
 [Variable Font Test](https://github.com/WordlessEcho/Variable-Font-Test)
